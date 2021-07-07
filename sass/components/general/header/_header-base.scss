@@ -1,0 +1,9 @@
+.header {
+  @include borderBottom($headerBorderColor);
+}
+
+@include forSize(tablets) {
+  .header-container {
+    @include flexSpaceCenter;
+  }
+}

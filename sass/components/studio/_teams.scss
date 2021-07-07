@@ -1,0 +1,86 @@
+.teams-card {
+  background-color: $litegreyBkgColor;
+  .teams-card__list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  @include forSize(tablets) {
+    .teams-card__list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+    }
+  }
+  @include forSize(desktop) {
+    .teams-card__list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+    }
+  }
+}
+.teams-card__item {
+  background-color: $liteColor;
+  box-shadow: $cardShadow;
+  border-radius: $cardBorderRadius;
+}
+.teams-card__content {
+  text-align: center;
+  padding: 30px 0;
+}
+.teams-card__name {
+  margin-bottom: 10px;
+
+  font-weight: $fontsLight;
+  font-size: $size-16;
+  line-height: 1.188;
+  color: $titleColor;
+}
+.teams-card__proffesion {
+  margin-bottom: 16px;
+  font-size: $size-16;
+  line-height: 1.188;
+}
+
+.card-social__list {
+  @include flexJust-Center;
+  @media screen and (max-width: 320px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 0;
+  }
+}
+
+.card-social__item {
+  &:not(:last-child) {
+    margin-right: 10px;
+  }
+  @media screen and (max-width: 320px) {
+    &:not(:last-child) {
+      margin-right: 0;
+    }
+  }
+}
+.card-social__link {
+  @include flexCenterCenter;
+  @include socialLink;
+
+  &:hover,
+  :focus {
+    background-color: $activeColor;
+    color: $liteColor;
+  }
+
+  &--teams {
+    background-color: $liteColor;
+    color: $greyCardLinkColor;
+  }
+}
+
+.card-social__icon {
+  @include socialIcon;
+}

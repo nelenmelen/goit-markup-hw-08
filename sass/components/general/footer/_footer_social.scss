@@ -1,0 +1,28 @@
+.footer-right-part {
+  margin-bottom: 60px;
+  text-align: center;
+
+  @include forSize(desktop) {
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
+}
+.footer-right-part_text {
+  margin-bottom: 20px;
+  font-weight: $fontsNormal;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $liteColor;
+  @include forSize(tablets) {
+    text-align: center;
+  }
+  @include forSize(desktop) {
+    text-align: start;
+  }
+}
+
+.card-social__link--footer {
+  background-color: $footerSocialBkgColor;
+  color: $liteColor;
+}

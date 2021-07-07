@@ -1,0 +1,144 @@
+@include forSize(tablets) {
+  .mobile-menu,
+  .mobile-button {
+    display: none;
+  }
+}
+
+.logo {
+  display: block;
+  padding: 16px 0;
+  @include logoFonts;
+  color: $activeColor;
+}
+.site-nav__logo-secondary {
+  color: $darkColor;
+}
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@include forSize(maxmobile) {
+  .site-nav__list,
+  .contacts {
+    display: none;
+  }
+
+  .mobile-button {
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    color: $titleColor;
+    background-color: $liteColor;
+    padding: 0;
+
+    &:focus,
+    &:hover {
+      color: $activeColor;
+    }
+    &__icon {
+      fill: currentColor;
+    }
+  }
+
+  // mobile menu
+  .mobile-menu {
+    display: none;
+
+    .mobile__item:not(:last-child) {
+      margin-bottom: 32px;
+    }
+
+    // mobile nav
+    .mobile__link {
+      @include fontStyle(500, 40, 47, 2);
+      // font-weight: $fontsLight;
+      // font-size: $size-40;
+      // line-height: 1.175;
+      // letter-spacing: 0.02em;
+      color: $titleColor;
+
+      &:hover,
+      &:focus {
+        color: $activeColor;
+      }
+    }
+    // mobile contacts
+    .mobile-contacts__item:not(:last-child) {
+      margin-bottom: 35px;
+    }
+    .mobile-contacts__link {
+      font-weight: $fontsLight;
+      font-size: $size-24;
+      line-height: 1.167;
+      letter-spacing: 0.02em;
+      color: $primaryColor;
+      &--tel {
+        font-size: $size-34;
+        line-height: 1.177;
+        color: $activeColor;
+      }
+    }
+    // mobile social link
+    .mobile-social {
+      display: flex;
+      @media screen and(max-width:479px) {
+        flex-direction: column;
+      }
+
+      &__item:not(:last-child) {
+        margin-right: 10px;
+      }
+      @include forSize(mobile) {
+        &__item:nth-child(n + 2)::before {
+          content: '';
+
+          display: inline-flex;
+
+          align-items: center;
+          width: 1px;
+          height: 22px;
+          padding-top: 8px;
+          margin-right: 6px;
+          background-color: $primaryColor;
+        }
+      }
+      &__link {
+        position: relative;
+        font-weight: $fontsLight;
+        font-size: $size-18;
+        line-height: 1.223;
+        letter-spacing: 0.02em;
+        color: $activeColor;
+      }
+    }
+  }
+  // mobile is open
+  .mobile-menu.is-open {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100vw;
+    height: 100vh;
+    background-color: $liteColor;
+    z-index: 1000;
+
+    .container {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      padding: 48px 40px;
+    }
+
+    .mobile-button__closed {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+    }
+  }
+}

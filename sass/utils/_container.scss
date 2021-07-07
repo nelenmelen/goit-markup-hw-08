@@ -1,0 +1,18 @@
+.container {
+  width: 100%;
+  @include pushAuto;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  @include forSize(mobile) {
+    width: $mobile;
+  }
+
+  @include forSize(tablets) {
+    width: $tablets;
+  }
+
+  @include forSize(desktop) {
+    width: $desktop;
+  }
+}

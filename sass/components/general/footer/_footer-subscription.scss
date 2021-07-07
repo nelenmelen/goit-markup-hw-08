@@ -1,0 +1,97 @@
+.footer-subscription {
+  @include forSize(maxdesktop) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  @include forSize(desktop) {
+    margin-left: 93px;
+  }
+}
+.footer-subscription__form {
+  text-align: center;
+  @include forSize(tablets) {
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @include forSize(desktop) {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    width: 570px;
+  }
+}
+
+.footer-subscription__text {
+  @include forSize(desktop) {
+    text-align: start;
+  }
+  margin-bottom: 20px;
+
+  font-weight: $fontsNormal;
+  line-height: 1.143;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $liteColor;
+}
+.footer-subscription__input {
+  @include forSize(minimobile) {
+    width: 100%;
+  }
+  width: 450px;
+  margin-bottom: 20px;
+
+  padding-left: 16px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  @include forSize(desktop) {
+    margin-bottom: 0;
+    margin-right: 12px;
+    width: 358px;
+  }
+  font-size: $size-16;
+  line-height: 1.25;
+  color: $footerInputColor;
+  background-color: $footerBkgColor;
+  border: 1px solid $footerBorderColor;
+  border-radius: $borderRadiusAccent;
+
+  &:focus {
+    outline: none;
+    border-color: $activeColor;
+  }
+
+  &::placeholder {
+    font-size: $size-16;
+    line-height: 1.25;
+    color: $footerInputColor;
+  }
+}
+.footer-subscription__button {
+  @include forSize(maxmobile) {
+    margin: 0 auto;
+  }
+  min-width: 200px;
+  padding: 10px 28px;
+
+  display: flex;
+
+  font-family: $fontRoboto;
+  font-weight: $fontsNormal;
+  font-size: $size-16;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: $liteColor;
+  background-color: $activeColor;
+  border-color: transparent;
+  border-radius: $borderRadiusAccent;
+}
+.footer-subscription__icon {
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
+}

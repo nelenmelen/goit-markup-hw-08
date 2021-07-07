@@ -1,0 +1,61 @@
+.clients__list {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  @include forSize(mobile) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include forSize(tablets) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    @include forSize(desktop) {
+      grid-template-columns: repeat(6, 1fr);
+
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+.clients__item:not(:last-child) {
+  @include forSize(minimobile) {
+    margin-bottom: 10px;
+  }
+}
+
+.clients__link {
+  @include flexCenterCenter;
+  min-width: 170px;
+  height: 92px;
+  @include forSize(mobile) {
+    width: 210px;
+  }
+  @include forSize(tablets) {
+    width: 226px;
+  }
+  @include forSize(desktop) {
+    width: 170px;
+  }
+  border-radius: $borderRadiusAccent;
+  @include borderSolid(1, $greyCardLinkColor);
+  color: $greyCardLinkColor;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    color: $activeColor;
+    border-color: $activeColor;
+  }
+}
+.clients__icon {
+  @include clientsIcon;
+}

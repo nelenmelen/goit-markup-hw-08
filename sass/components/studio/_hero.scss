@@ -1,0 +1,78 @@
+.hero {
+  @include pushAuto;
+  padding-bottom: 118px;
+  padding-top: 118px;
+  text-align: center;
+  background-image: linear-gradient($heroOverlay, $heroOverlay),
+    url(..//..//../images/mobile/mobile-header-min.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    background-image: linear-gradient($heroOverlay, $heroOverlay),
+      url(..//..//../images/mobile/mobile-header@2x-min.jpg);
+  }
+
+  @include forSize(tablets) {
+    background-image: linear-gradient($heroOverlay, $heroOverlay),
+      url(..//..//../images/tablets/tablets-header-min.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($heroOverlay, $heroOverlay),
+        url(..//..//../images/tablets/tablets-header@2x-min.jpg);
+    }
+  }
+
+  @include forSize(desktop) {
+    max-width: 1600px;
+    padding-bottom: 200px;
+    padding-top: 200px;
+    background-image: linear-gradient($heroOverlay, $heroOverlay),
+      url(..//..//../images/desktop/desktop-header-min.jpg);
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: linear-gradient($heroOverlay, $heroOverlay),
+        url(..//..//../images/desktop/desktop-header@2x-min.jpg);
+    }
+  }
+}
+
+.hero__title {
+  @include pushAuto;
+  margin-bottom: 30px;
+  max-width: 360px;
+  font-weight: $fontsHight;
+  font-size: $size-26;
+  line-height: 1.616;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $liteColor;
+
+  @include forSize(desktop) {
+    max-width: 698px;
+    font-size: $size-44;
+    line-height: 1.364;
+  }
+}
+.hero__button {
+  min-width: 200px;
+  padding: 10px 0;
+  border-radius: $borderRadiusAccent;
+  border-color: transparent;
+
+  font-family: $fontRoboto;
+  font-weight: $fontsNormal;
+  font-size: $size-16;
+  line-height: 1.875;
+  letter-spacing: 0.06em;
+  color: $liteColor;
+  background-color: $activeColor;
+
+  &:hover,
+  &:focus {
+    background-color: $buttonHoverHero;
+  }
+}

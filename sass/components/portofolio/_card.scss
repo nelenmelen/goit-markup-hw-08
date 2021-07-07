@@ -1,0 +1,73 @@
+.card-list {
+  @include forSize(minimobile) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  @include forSize(mobile) {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  @include forSize(tablets) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+  @include forSize(desktop) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+  }
+}
+.card-list__item {
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:hover .card-list__overlay {
+    box-shadow: $cardBoxShadow;
+    transform: translateY(0);
+  }
+}
+
+.card-list__thumb {
+  position: relative;
+  overflow: hidden;
+}
+.card-list__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: 63px 24px;
+
+  font-size: $size-18;
+  line-height: 1.556;
+  color: $liteColor;
+  background-color: $activeColor;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateY(100%);
+}
+.card-list__content {
+  @include forSize(minmaxtablets) {
+    height: 146px;
+  }
+  padding: 20px 24px;
+  text-align: start;
+  background-color: $liteColor;
+  @include borderCardPortfolio($cardPortofolioBorderColor);
+}
+.card-list__title {
+  margin-bottom: 4px;
+
+  font-weight: $fontsNormal;
+  font-size: $size-18;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: $titleColor;
+}
+.card-list__text {
+  font-size: $size-16;
+  line-height: 1.875;
+  color: $primaryColor;
+}

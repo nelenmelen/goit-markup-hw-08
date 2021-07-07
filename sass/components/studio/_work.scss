@@ -1,0 +1,36 @@
+.our-works {
+  display: none;
+}
+@include forSize(desktop) {
+  .our-works {
+    display: block;
+  }
+  .not-top-padding {
+    padding-top: 0;
+  }
+
+  .our-works__list {
+    display: flex;
+    margin-left: -30px;
+  }
+  .our-works__item {
+    position: relative;
+    flex-basis: calc((100% - 90px) / 3);
+    margin-left: 30px;
+  }
+  .our-works__text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 370px;
+    height: 70px;
+
+    @include flexCenterCenter;
+
+    font-weight: $fontsNormal;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $liteColor;
+    background-color: $textBkgColor;
+  }
+}

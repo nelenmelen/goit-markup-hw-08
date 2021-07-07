@@ -1,0 +1,66 @@
+// breakpoint
+$mobile: 480px;
+$tablets: 768px;
+$desktop: 1200px;
+
+// colors project
+$activeColor: #2196f3;
+$buttonHoverHero: #188ce8;
+$titleColor: #212121;
+$primaryColor: #757575;
+$liteColor: #ffffff;
+$darkColor: #000000;
+$heroBkgColor: #c4c4c4;
+$heroOverlay: rgba(47, 48, 58, 0.4);
+$litegreyBkgColor: #f5f4fa;
+$headerBorderColor: #ececec;
+//  work section
+$textBkgColor: rgba(47, 48, 58, 0.8);
+//  card section
+$greyCardLinkColor: #afb1b8;
+$cardBorderRadius: 0px 0px 4px 4px;
+$teamsSocialShadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+$cardShadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+  0px 2px 1px rgba(0, 0, 0, 0.2);
+$cardPortofolioBorderColor: #eeeeee;
+//  footer section
+$footerSocialBkgColor: rgba(255, 255, 255, 0.1);
+$footerContactsColor: rgba(255, 255, 255, 0.6);
+$footerBkgColor: #2f303a;
+//  footer form
+$footerBorderColor: rgba(255, 255, 255, 0.3);
+$footerInputColor: rgba(255, 255, 255, 0.6);
+//  portofolio section
+$cardBoxShadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+  1px 4px 6px rgba(0, 0, 0, 0.16);
+$buttonShadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+  0px 2px 2px rgba(0, 0, 0, 0.12);
+//  modal section
+$overlayColor: rgba(0, 0, 0, 0.2);
+$buttonBorderColor: rgba(0, 0, 0, 0.1);
+$inputBorderColor: rgba(33, 33, 33, 0.2);
+$textareaPlaceholderColor: rgba(117, 117, 117, 0.5);
+
+// border radius
+$borderRadiusAccent: 4px;
+
+// fonts style
+$fontRaleway: 'Raleway', sans-serif;
+$fontRoboto: 'Roboto', sans-serif;
+// font-weight
+$fontsBase: 400;
+$fontsLight: 500;
+$fontsNormal: 700;
+$fontsHight: 900;
+// font-size
+$size-12: 12px;
+$size-14: 14px;
+$size-16: 16px;
+$size-18: 18px;
+$size-20: 20px;
+$size-24: 24px;
+$size-26: 26px;
+$size-34: 34px;
+$size-36: 36px;
+$size-40: 40px;
+$size-44: 44px;

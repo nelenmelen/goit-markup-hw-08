@@ -1,0 +1,32 @@
+.footer__logo--secondary {
+  color: $liteColor;
+}
+.footer-logo {
+  padding: 0;
+  margin-bottom: 20px;
+  display: block;
+}
+.footer {
+  background-color: $footerBkgColor;
+  padding: 60px 0;
+}
+
+.footer-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @include forSize(tablets) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
+  @include forSize(desktop) {
+    @include flexBaseline;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+}
