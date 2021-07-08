@@ -6,9 +6,7 @@
   &__item {
     margin-right: 8px;
   }
-  &__item:not(:nth-child(n + 4)) {
-    margin-bottom: 15px;
-  }
+
   @include forSize(minimobile) {
     &__item:not(:last-child) {
       margin-bottom: 15px;

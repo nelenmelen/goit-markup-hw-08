@@ -49,9 +49,7 @@
   transform: translateY(100%);
 }
 .card-list__content {
-  @include forSize(minmaxtablets) {
-    height: 146px;
-  }
+ 
   padding: 20px 24px;
   text-align: start;
   background-color: $liteColor;
